@@ -1,5 +1,5 @@
 <?php
-namespace fstools;
+namespace FSTools;
 
 class FSTraverser
 {
