@@ -1,4 +1,5 @@
 <?php
+namespace fstools;
 
 class FSTraverser
 {
@@ -154,4 +155,4 @@ class FSTraverser
     }
 }
 
-class FSTraverserException extends Exception {}
+class FSTraverserException extends \Exception {}
