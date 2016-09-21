@@ -1,0 +1,8 @@
+{
+    "name": "brainexploded/fstools",
+    "autoload": {
+        "psr-0" : {
+            "Brainexploded\\FSTools" : ""
+        }
+    }
+}
