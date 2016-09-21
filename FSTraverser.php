@@ -1,5 +1,5 @@
 <?php
-namespace FSTools;
+namespace Brainexploded\FSTools;
 
 class FSTraverser
 {
