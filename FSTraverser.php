@@ -65,10 +65,10 @@ class FSTraverser
     public function go($returnContent = false)
     {
         if (!$this->rootDir) {
-            throw new FSTraverserException('No root dir');
+            throw new FSTraverserException('Root directory is not specified');
         }
         if (!$this->callback) {
-            throw new FSTraverserException('No callback');
+            throw new FSTraverserException('Callback function is not specified');
         }
 
         $this->traverse($this->rootDir, $this->callback, $returnContent);
