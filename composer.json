@@ -1,5 +1,6 @@
 {
     "name": "brainexploded/fstools",
+    "license": "MIT",
     "autoload": {
         "psr-4" : {
             "Brainexploded\\FSTools\\" : ""
