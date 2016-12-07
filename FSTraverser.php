@@ -83,7 +83,7 @@ class FSTraverser
                     continue;
                 }
 
-                if (is_dir($fullpath) && $this->validateDir($fullpath, $depth)) {
+                if (is_dir($fullpath) && !is_link($fullpath) && $this->validateDir($fullpath, $depth)) {
                     $this->traverse($fullpath, $callback, $returnContent, $depth+1);
                 } elseif ($this->validateFile($fullpath)) {
                     if ($returnContent) {
