@@ -40,7 +40,7 @@ class FSTraverser
 
     public function setExcludeNodes($excludeNodes)
     {
-        $this->excludeNodes = $this->excludeNodes;
+        $this->excludeNodes = $excludeNodes;
         return $this;
     }
 
@@ -111,15 +111,6 @@ class FSTraverser
         }
     }
 
-    protected function getExtension($filename)
-    {
-        $dotPos = strrpos($filename, '.');
-        if ($dotPos === false) {
-            return false;
-        }
-        return substr($filename, strrpos($filename, '.')+1);
-    }
-
     protected function validateDir($dir, $depth)
     {
         if (in_array($dir, $this->excludeNodes) || is_link($dir)) {
@@ -139,7 +130,7 @@ class FSTraverser
         if (in_array($file, $this->excludeNodes)) {
             return false;
         }
-        $ext = $this->getExtension($file);
+        $ext = FSUtil::getFileExtension($file);
 
         if ($this->allowedExtensions) {
             if (!$ext || !in_array($ext, $this->allowedExtensions)) {
